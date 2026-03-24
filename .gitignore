@@ -1,0 +1,30 @@
+# Go 工作区
+go.work.sum
+
+# Go 编译产物
+/bin
+/dist
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# 编辑器
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# 环境
+.env
+.env.local
+
+# 日志
+*.log
+logs/
+
+# 临时文件
+tmp/
