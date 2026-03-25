@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package proto;
+
+option go_package = "./proto";
+option py_generic_services = true;
+
+message AICallRequest {
+  string prompt = 1;
+  string model = 2;
+  int32 max_tokens = 3;
+  float temperature = 4;
+}
+
+message AICallResponse {
+  string result = 1;
+  string model = 2;
+  int32 token_count = 3;
+}
+
+service AIService {
+  rpc CallAI (AICallRequest) returns (AICallResponse);
+}
